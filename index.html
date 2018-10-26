@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy Kids Gym</title>
+    <meta name="description" content="Aksaray'ın ilk ve tek olan cimnastik salonu Happy Kids Gym.">
+    <meta name="keywords" content="Aksaray, Cimnastik, Artistik, Çocuk, Spor">
+
+    <link href="//fonts.googleapis.com/css?family=Mali:500,600&amp;subset=latin-ext" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            font-family: 'Mali', cursive;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .page-title {
+            margin: 15px auto;
+            font-size: 2.441em;
+            font-weight: 600;
+            color: #F23C50;
+            /* text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; */
+        }
+
+        .page-content {
+            margin: 0 auto 25px;
+        }
+
+        .sub-title {
+            padding: 10px 0;
+            font-size: 1.563em;
+            font-weight: 600;
+            color: #F23C50;
+            /* text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; */
+        }
+
+        #fb {
+            margin: 0 auto 25px;
+            -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        #map {
+            margin: 0 auto 25px;
+            -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        #map__area {
+            height: 300px;
+        }
+
+        .map__address{
+            margin-bottom: 15px;
+            font-size: 0.875em;
+        }
+
+        .copyright {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-md-6 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v3.2&appId=1993358904290443&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="container">
+
+        <header>
+            <h1 class="page-title  text-center">Happy Kids Gym</h1>
+        </header>
+
+        <main class="page-content  text-center">
+            <p>Aksaray'ın ilk ve tek olan cimnastik salonu Happy Kids Gym.</p>
+        </main>
+
+        <div id="fb">
+            <!-- <h2 class="sub-title">Sosyal Medya</h2> -->
+            <div class="fb-page" data-href="https://www.facebook.com/gymhappykids" data-tabs="timeline, events, messages"
+                data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/gymhappykids" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/gymhappykids">HappyKids Gym</a>
+                </blockquote>
+            </div>
+        </div>
+        <div id="map">
+            <h2 class="sub-title  text-center">Adres</h2>
+            <div class="map__address  text-center"><p>Taşpazar mahalesi 846. sokak Yaşam Park Sitesi B blok 3 /A Aksaray</p></div>
+            <div id="map__area"></div>
+        </div>
+
+        <footer>
+            <div class="copyright  text-center">&copy; Tüm hakları saklıdır.</div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var building = { lat: 38.365835, lng: 34.016909 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map__area'), { zoom: 17, center: building });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: building, map: map });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFl56HFkzP4aI0Q7fdoe-j1wwHfrsB24U&language=tr&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>
