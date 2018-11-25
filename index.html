@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aksaray'ın İlk ve Tek Cimnastik Salonu - Happy Kids Gym</title>
     <meta name="description" content="Aksaray'ın ilk ve tek cimnastik salonu.">
-    <meta name="keywords" content="Cimnastik, Eğitim, Aksaray, Artistik Cimnastik, Ritmik Cimnastik, Aerobik Cimnastik, Trampolin, Çocuk, Spor, Spor Salonu, Kurs, Anaokulu">
+    <meta name="keywords" content="Cimnastik, Jimnastik, Aksaray, Eğitim, Artistik Cimnastik, Ritmik Cimnastik, Aerobik Cimnastik, Trampolin, Çocuk, Spor, Spor Salonu, Kurs, Anaokulu">
     <link href="https://fonts.googleapis.com/css?family=Mali:500,600&amp;subset=latin-ext" rel="stylesheet">
 
     <style>
@@ -28,6 +28,11 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .main-area {
+            margin: 25px auto;
+        }
+
         .page-title {
             margin: 15px auto;
             font-size: 2.441em;
@@ -38,13 +43,24 @@
             margin: 0 auto 25px;
         }
         .sub-title {
-            padding: 10px 0;
+            margin-bottom: 8px;
             font-size: 1.563em;
             font-weight: 600;
             color: #F23C50;
         }
-        #fb {
-            margin: 25px auto;
+        .social-media {
+            margin: 0 auto 25px;
+            height: 30px;
+        }
+        .social-media__icon {
+            display: inline-block;
+            width: 30px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        .social-media__icon > img {
+            display: block;
+            width: 100%;
         }
         #map {
             margin: 0 auto 25px;
@@ -84,32 +100,24 @@
 </head>
 
 <body>
-
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v3.2&appId=1993358904290443&autoLogAppEvents=1';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
     <div class="container">
-        <main class="page-content  text-center">
-        	<h1 class="page-title  text-center">Happy Kids Gym</h1>
-        	<p>Aksaray'ın ilk ve tek cimnastik salonu.</p>
-        
-	        <div id="fb">
-	            <div class="fb-page" data-href="https://www.facebook.com/gymhappykids" data-tabs="timeline, events, messages"
-	                data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true"
-	                data-hide-cover="false" data-show-facepile="true">
-	                <blockquote cite="https://www.facebook.com/gymhappykids" class="fb-xfbml-parse-ignore">
-	                    <a href="https://www.facebook.com/gymhappykids">Happy Kids Gym - Aksaray Cimnastik Salonu</a>
-	                </blockquote>
-	            </div>
-	        </div>
+        <main class="main-area  text-center">
+            <h1 class="page-title">Happy Kids Gym</h1>
+            <div class="page-content">
+                <p>Aksaray'ın ilk ve tek cimnastik salonu.</p>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/gymhappykids" class="social-media__icon  social-media__icon--fb" target="_blank" rel="noopener" title="Facebook">
+                    <img src="./images/logo-fb-blue.svg" alt="Facebook" />
+                </a>
+                <!-- <a href="#" class="social-media__icon  social-media__icon--tw">
+                    <img src="./images/logo-tw-whiteonblue.svg" alt="Twitter" />
+                </a> -->
+                <a href="https://www.instagram.com/gymhappykids" class="social-media__icon  social-media__icon--insta" target="_blank" rel="noopener" title="Instagram">
+                    <img src="./images/logo-insta-colored.svg" alt="Instagram" />
+                </a>
+            </div>
 
 	        <div id="map">
 	            <h2 class="sub-title  text-center">Adres</h2>
